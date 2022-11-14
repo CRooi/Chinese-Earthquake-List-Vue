@@ -334,7 +334,7 @@
         border-radius:10px;
         line-height:48px;
         font-size:30px;
-        font-family:OPPOSans;
+        font-family:OPPOSans-H;
         text-align:center;
         text-shadow:0px 4px 10px rgba(0,0,0,0.3);
         border: 2px solid white;

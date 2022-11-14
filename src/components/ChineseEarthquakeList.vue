@@ -208,14 +208,20 @@
                     this.subMaxIntColor = subMaxIntColor;
                 })
             },
-            calcMaxInt(calcMagnitude, calcDepth) {
-                let numa = (calcMagnitude) / 2.08 * 2.82;
-                let numb = (calcDepth) * -0.013;
-                let maxInt = Math.round(numa + numb);
-                if (maxInt > 12) maxInt = 12;
-                if (maxInt < 1) maxInt = 1;
-                return (maxInt);
+            calcMaxInt(calcMagnitude, calcDepth){
+                numa = 1.65*calcMagnitude;
+                numb = calcDepth<10 ? 1.21*Math.log10(10) : 1.21*Math.log10(calcDepth);
+                maxInt = Math.round(numa/numb);
             }
+            // 旧算法
+            // calcMaxInt(calcMagnitude, calcDepth) {
+            //     let numa = (calcMagnitude) / 2.08 * 2.82;
+            //     let numb = (calcDepth) * -0.013;
+            //     let maxInt = Math.round(numa + numb);
+            //     if (maxInt > 12) maxInt = 12;
+            //     if (maxInt < 1) maxInt = 1;
+            //     return (maxInt);
+            // }
         },
         created:function(){
             this.init();

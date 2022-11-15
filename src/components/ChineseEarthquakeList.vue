@@ -198,10 +198,26 @@
                         subDepth[i] = eval("json.No" + i + ".depth");
                         subMaxInt[i] = this.calcMaxInt(subMagnitude[i], subDepth[i]);
                         subMaxIntColor[i] = intColor[subMaxInt[i]].bkcolor;
+                        subTime[i] += '\u00a0\u00a0' + subDepth[i] + 'km';
                         if (subEpicenter[i].indexOf('（有感）') != -1 || subEpicenter[i].indexOf('(有感)') != -1){
                             subEpicenter[i] = subEpicenter[i].replace('（有感）', '');
                             subEpicenter[i] = subEpicenter[i].replace('(有感)', '');
                             subTime[i] += ' 有感';
+                        }
+                        if (subEpicenter[i].indexOf('（矿震）') != -1 || subEpicenter[i].indexOf('(矿震)') != -1){
+                            subEpicenter[i] = subEpicenter[i].replace('（矿震）', '');
+                            subEpicenter[i] = subEpicenter[i].replace('(矿震)', '');
+                            subTime[i] += ' 矿震';
+                        }
+                        if (subEpicenter[i].indexOf('（疑爆）') != -1 || subEpicenter[i].indexOf('(疑爆)') != -1){
+                            subEpicenter[i] = subEpicenter[i].replace('（疑爆）', '');
+                            subEpicenter[i] = subEpicenter[i].replace('(疑爆)', '');
+                            subTime[i] += ' 疑爆';
+                        }
+                        if (subEpicenter[i].indexOf('（塌陷）') != -1 || subEpicenter[i].indexOf('(塌陷)') != -1){
+                            subEpicenter[i] = subEpicenter[i].replace('（塌陷）', '');
+                            subEpicenter[i] = subEpicenter[i].replace('(塌陷)', '');
+                            subTime[i] += ' 塌陷';
                         }
                         if (subDepth[i] >= 150) subTime[i] += ' 深源';
                         this.calcSubEpicenterFontSize(subEpicenter[i], i);

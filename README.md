@@ -3,7 +3,7 @@
 
 
 ## 演示站点
-https://app.projectbs.cn/CEQL/
+https://app.projectbs.cn/CEQL/ （已停用）。
 
 ## 截图
 ![iShot_2022-11-05_13.37.55.png](https://s2.loli.net/2022/11/05/f3NoylMxiZzaTGd.png)
